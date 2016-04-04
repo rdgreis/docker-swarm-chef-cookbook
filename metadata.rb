@@ -1,0 +1,7 @@
+name             'docker-swarm-cookbook'
+maintainer       'YOUR_NAME'
+maintainer_email 'YOUR_EMAIL'
+license          'All rights reserved'
+description      'Installs/Configures docker-swarm-cookbook'
+long_description 'Installs/Configures docker-swarm-cookbook'
+version          '0.1.0'
