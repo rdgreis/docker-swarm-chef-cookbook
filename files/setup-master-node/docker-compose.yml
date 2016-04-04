@@ -1,0 +1,11 @@
+swarm-master:
+  image: swarm
+  ports:
+    - 3376:3376
+  volumes:
+    - ${CA_ROOT}:${CA_ROOT}:ro
+  command: "manage --tlsverify \
+                   --tlscacert=${CA_ROOT}/ca.pem \
+                   --tlscert=${CA_ROOT}/cert.pem \
+                   --tlskey=${CA_ROOT}/key.pem \
+                   --host=0.0.0.0:3376 token://${SWARM_TOKEN}"

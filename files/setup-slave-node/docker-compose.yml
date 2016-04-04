@@ -1,0 +1,5 @@
+swarm-slave:
+  image: swarm
+  ports:
+    - 4000:4000
+  command: "join --addr=NODE_IP_ADDRESS:2376 token://${SWARM_TOKEN}"
