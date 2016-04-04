@@ -9,15 +9,15 @@ platforms:
   - name: ubuntu-14.04
 
 suites:
-  - name: default
+  - name: maste-node
     run_list:
       - recipe[apt-docker::default]
       - recipe[docker-swarm-cookbook::default]
       - recipe[docker-swarm-cookbook::setup-master-node]
     attributes:
-#  - name: slave
-#      run_list:
-#        - recipe[apt-docker::default]
-#        - recipe[docker-swarm-cookbook::default]
-#        - recipe[docker-swarm-cookbook::setup-slave-node]
-#      attributes:
+  - name: slave-node
+    run_list:
+      - recipe[apt-docker::default]
+      - recipe[docker-swarm-cookbook::default]
+      - recipe[docker-swarm-cookbook::setup-slave-node]
+    attributes:

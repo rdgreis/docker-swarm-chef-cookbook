@@ -174,6 +174,7 @@ cookbook_file "#{WORKSPACE}/docker-compose.yml" do
   action :create
 end
 
+# TODO: fix it.
 ENV['MASTER_IP_ADDRESS'] = '10.0.2.15'
 ENV['CA_ROOT'] = caroot
 

@@ -29,7 +29,7 @@ case node['platform']
     end
 end
 
-paths = %W(#{WORKSPACE} #{WORKSPACE}/chef)
+paths = %W(#{WORKSPACE} #{WORKSPACE}/chef #{WORKSPACE}/certs)
 
 paths.each do |path|
   directory path do
